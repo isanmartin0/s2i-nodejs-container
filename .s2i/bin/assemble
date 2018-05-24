@@ -43,8 +43,8 @@ echo "Before assembling"
     ls -al /usr/libexec/s2i
     echo "echo $HOME"
     echo $HOME
-    echo "cat ~/.npmrc"
-    cat ~/.npmrc
+
+
     echo "npm config get registry"
     npm config get registry
     echo "ls - al ."
