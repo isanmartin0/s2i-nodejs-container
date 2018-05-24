@@ -51,6 +51,8 @@ echo "Before assembling"
     npm view keedio-nodejs-helloworld  dist.tarball
     echo "npm pack keedio-nodejs-helloworld@1.0.2"
     npm pack keedio-nodejs-helloworld@1.0.2
+    echo "ls - al ."
+    ls - al .
 
 
 
