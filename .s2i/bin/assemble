@@ -28,6 +28,8 @@ safeLogging () {
 
     shopt -s dotglob
     echo "---> KEEDIO ************** Installing application source ..."
+    echo "pwd:"
+    pwd
     echo "node version:"
     node --version
     echo "npm version:"
