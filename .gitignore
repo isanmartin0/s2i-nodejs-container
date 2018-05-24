@@ -62,4 +62,4 @@ test-report.xml
 
 #Idea
 .idea
-nodejs-helloWorld.iml
+s2i-nodejs-container.iml
