@@ -41,8 +41,10 @@ echo "Before assembling"
     ls -al /tmp/src
     echo "ls /usr/libexec/s2i/assemble:"
     ls -al /usr/libexec/s2i
-    echo "npm whoami"
-    npm whoami
+    echo "cat ~/.npmrc"
+    cat ~/.npmrc
+
+
 
 echo "Executing original assembling"
 
