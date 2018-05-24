@@ -40,9 +40,11 @@ echo "Before assembling"
     echo "ls -al /tmp/src"
     ls -al /tmp/src
     echo "ls /usr/libexec/s2i/assemble:"
-    ls /usr/libexec/s2i/assemble
+    ls -al /usr/libexec/s2i
 
+echo "Executing original assembling"
 
+/usr/libexec/s2i/assemble
 
 # Fix source directory permissions
 fix-permissions ./
