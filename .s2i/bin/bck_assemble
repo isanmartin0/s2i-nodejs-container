@@ -19,15 +19,7 @@ set -e
 #npm link $module_list
 
 
-safeLogging () {
-    if [[ $1 =~ http[s]?://.*@.*$ ]]; then
-        echo $1 | sed 's/^.*@/redacted@/'
-    else
-        echo $1
-    fi
-}
 
-shopt -s dotglob
 echo "Before assembling"
 
     echo "---> KEEDIO ************** Installing application source ..."
@@ -39,9 +31,19 @@ echo "Before assembling"
     npm --version
     echo "ls -al /tmp/src"
     ls -al /tmp/src
-    echo "ls /usr/libexec/s2i/assemble:"
-    ls /usr/libexec/s2i/assemble
 
+echo "Executing original assembling"
+
+/usr/libexec/s2i/assemble
+rc=$?
+
+if [ $rc -eq 0 ]; then
+    echo "After successful assembling"
+else
+    echo "After failed assembling"
+fi
+
+exit $rc
 
 
 # Fix source directory permissions
