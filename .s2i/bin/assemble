@@ -41,6 +41,8 @@ echo "Before assembling"
     ls -al /tmp/src
     echo "ls /usr/libexec/s2i/assemble:"
     ls -al /usr/libexec/s2i
+    echo "echo $HOME"
+    echo $HOME
     echo "cat ~/.npmrc"
     cat ~/.npmrc
     echo "npm config get registry"
