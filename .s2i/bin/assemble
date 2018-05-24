@@ -43,6 +43,8 @@ echo "Before assembling"
     ls -al /usr/libexec/s2i
     echo "cat ~/.npmrc"
     cat ~/.npmrc
+    echo "/opt/app-root/src/.npmrc"
+    cat /opt/app-root/src/.npmrc
 
 
 
