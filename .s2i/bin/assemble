@@ -47,14 +47,14 @@ echo "Before assembling"
 
     echo "npm config get registry"
     npm config get registry
-    echo "ls - al ."
-    ls - al .
+    echo "ls -al ."
+    ls -al .
     echo "npm view keedio-nodejs-helloworld  dist.tarball"
     npm view keedio-nodejs-helloworld  dist.tarball
     echo "npm pack keedio-nodejs-helloworld@1.0.2"
     npm pack keedio-nodejs-helloworld@1.0.2
-    echo "ls - al ."
-    ls - al .
+    echo "ls -al ."
+    ls -al .
 
 
 
