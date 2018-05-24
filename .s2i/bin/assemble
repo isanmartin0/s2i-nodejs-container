@@ -47,14 +47,33 @@ echo "Before assembling"
 
     echo "npm config get registry"
     npm config get registry
-    echo "ls -al ."
-    ls -al .
+
+    echo "cd /tmp/src"
+    cd /tmp/src
+    echo "ls -al"
+    ls -al
     echo "npm view keedio-nodejs-helloworld  dist.tarball"
     npm view keedio-nodejs-helloworld  dist.tarball
     echo "npm pack keedio-nodejs-helloworld@1.0.2"
     npm pack keedio-nodejs-helloworld@1.0.2
-    echo "ls -al ."
-    ls -al .
+    echo "ls -al"
+    ls -al
+
+
+    echo "tar -xvzf keedio-nodejs-helloworld-1.0.2.tgz"
+    tar -xvzf keedio-nodejs-helloworld-1.0.2.tgz
+
+    echo "mv package/* /opt/app-root/src"
+    mv package/* /opt/app-root/src
+
+    echo "rm -rf package"
+    rm -rf package
+
+    echo "rm -rf keedio-nodejs-helloworld-1.0.2.tgz"
+    rm -rf keedio-nodejs-helloworld-1.0.2.tgz
+
+    echo "cd"
+    cd
 
 
 
