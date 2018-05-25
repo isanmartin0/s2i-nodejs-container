@@ -9,6 +9,7 @@
 LOCAL_SOURCE_DIR=/tmp/src
 DEPLOY_DIR=${HOME}
 PACKAGE_TAG = ${NODEJS_PACKAGE_TAG}
+PACKAGE_TARBALL = ${NODEJS_PACKAGE_TARBALL}
 IS_SCOPED_PACKAGE = ${NODEJS_IS_SCOPED_PACKAGE}
 
 
@@ -36,9 +37,12 @@ shopt -s dotglob
 echo "---> ************** (PRE ASSEMBLE) "
 
 
+
+echo "Pre assemble parameters"
 echo "LOCAL_SOURCE_DIR: $LOCAL_SOURCE_DIR"
 echo "DEPLOY_DIR: $DEPLOY_DIR"
 echo "PACKAGE_TAG: $PACKAGE_TAG"
+echo "PACKAGE_TARBALL: $PACKAGE_TARBALL"
 echo "IS_SCOPED_PACKAGE: $IS_SCOPED_PACKAGE"
 
 
@@ -54,13 +58,13 @@ npm config get registry
 cd "$LOCAL_SOURCE_DIR"
 
 echo "---> NPM view tarball"
-npm view $PACKAGE_NAME dist.tarball
+npm view $PACKAGE_TAG dist.tarball
 
 echo "---> NPM get tarball"
-npm pack $PACKAGE_NAME
+npm pack $PACKAGE_TAG
 
 echo "---> tar artifact"
-tar -xvzf keedio-nodejs-helloworld-1.0.2.tgz
+tar -xvzf $PACKAGE_TARBALL
 
 ERR=$?
 
