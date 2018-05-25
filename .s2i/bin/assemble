@@ -6,11 +6,7 @@
 [ -d "/usr/src/app" ] && exit 0
 
 
-LOCAL_SOURCE_DIR=/tmp/src
-DEPLOY_DIR=${HOME}
-PACKAGE_TAG = ${NODEJS_PACKAGE_TAG}
-PACKAGE_TARBALL = ${NODEJS_PACKAGE_TARBALL}
-IS_SCOPED_PACKAGE = ${NODEJS_IS_SCOPED_PACKAGE}
+
 
 
 function copy_artifacts() {
@@ -36,10 +32,15 @@ function remove_elements() {
 
 shopt -s dotglob
 
-
 echo "---> ************** (PRE ASSEMBLE) "
 
+date
 
+LOCAL_SOURCE_DIR=/tmp/src
+DEPLOY_DIR=${HOME}
+PACKAGE_TAG = $NODEJS_PACKAGE_TAG
+PACKAGE_TARBALL = $NODEJS_PACKAGE_TARBALL
+IS_SCOPED_PACKAGE = $NODEJS_IS_SCOPED_PACKAGE
 
 echo "Pre assemble parameters"
 echo "LOCAL_SOURCE_DIR: $LOCAL_SOURCE_DIR"
