@@ -28,6 +28,9 @@ function remove_elements() {
 
     echo "Removing tarball"
     rm -f $LOCAL_SOURCE_DIR/*.tgz
+
+    echo "Removing .s2i"
+    rm -rf $LOCAL_SOURCE_DIR/.s2i
 }
 
 
@@ -84,8 +87,15 @@ fi
 #Removing elements
 remove_elements
 
+echo "ls -al ($LOCAL_SOURCE_DIR)"
+ls -al
+
+
 #Change to $HOME
 cd $HOME
+
+echo "ls -al ($HOME)"
+ls -al
 
 
 echo "Executing original assembling"
