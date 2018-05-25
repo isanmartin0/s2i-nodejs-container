@@ -45,8 +45,8 @@ IS_SCOPED_PACKAGE = $NODEJS_IS_SCOPED_PACKAGE
 echo "Pre assemble parameters"
 echo "LOCAL_SOURCE_DIR: $LOCAL_SOURCE_DIR"
 echo "DEPLOY_DIR: $DEPLOY_DIR"
-echo "PACKAGE_TAG: $PACKAGE_TAG"
-echo "PACKAGE_TARBALL: $PACKAGE_TARBALL"
+echo "NODEJS_PACKAGE_TAG: ${NODEJS_PACKAGE_TAG}"
+echo "NODEJS_PACKAGE_TARBALLG: ${NODEJS_PACKAGE_TAG}"
 echo "IS_SCOPED_PACKAGE: $IS_SCOPED_PACKAGE"
 
 echo ${NODEJS_PACKAGE_TAG}
@@ -55,7 +55,7 @@ echo env.NODEJS_PACKAGE_TAG
 
 
 
-if [ -z "$PACKAGE_TAG" ]; then
+if [ -z "${NODEJS_PACKAGE_TAG}" ]; then
     echo "Aborting due to PACKAGE_TAG environment variable is not setted"
     exit 0
 fi
