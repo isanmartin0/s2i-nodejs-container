@@ -49,6 +49,11 @@ echo "PACKAGE_TAG: $PACKAGE_TAG"
 echo "PACKAGE_TARBALL: $PACKAGE_TARBALL"
 echo "IS_SCOPED_PACKAGE: $IS_SCOPED_PACKAGE"
 
+echo ${NODEJS_PACKAGE_TAG}
+echo ${NODEJS_PACKAGE_TARBALL}
+echo env.NODEJS_PACKAGE_TAG
+
+
 
 if [ -z "$PACKAGE_TAG" ]; then
     echo "Aborting due to PACKAGE_TAG environment variable is not setted"
