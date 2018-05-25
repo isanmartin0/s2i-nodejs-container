@@ -51,12 +51,12 @@ echo "IS_SCOPED_PACKAGE: $IS_SCOPED_PACKAGE"
 
 if [ -z "$PACKAGE_TAG" ]; then
     echo "Aborting due to PACKAGE_TAG environment variable is not setted"
-    exit 1
+    exit 0
 fi
 
 if [ -z "$PACKAGE_TARBALL" ]; then
     echo "Aborting due to PACKAGE_TARBALL environment variable is not setted"
-    exit 1
+    exit 0
 fi
 
 echo "---> Node version"
