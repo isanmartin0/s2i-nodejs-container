@@ -65,6 +65,8 @@ node --version
 echo "---> NPM version"
 npm --version
 
+
+
 echo "/opt/app-root/src/.npmrc"
 cat /opt/app-root/src/.npmrc
 
