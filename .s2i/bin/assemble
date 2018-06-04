@@ -68,10 +68,11 @@ npm --version
 if [ -z "${ARTIFACTORY_NPM_REPO}" ]; then
     echo "ARTIFACTORY_NPM_REPO variable is not setted "
 else
+    echo "---> Setting Artifactory NPM Registry location"
     npm config set registry  ${ARTIFACTORY_NPM_REPO}
 fi
 
-echo "---> Registry location"
+echo "---> NPM Registry location"
 npm config get registry
 
 cd "$LOCAL_SOURCE_DIR"
