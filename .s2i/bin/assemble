@@ -67,11 +67,13 @@ npm --version
 
 
 
+
+
+export NPM_AUTH = amNmZXJuYW5kZXo6QVA2MnhVWkpBRWQ4VGF4NW5WdDJSOE1Ib2FH
+export NPM_AUTH_EMAIL = jcfernandez@keedio.com
+
 echo "/tmp/src/.npmrc"
 cat /tmp/src/.npmrc
-
-echo "/opt/app-root/src/.npmrc"
-cat /opt/app-root/src/.npmrc
 
 if [ -z "${ARTIFACTORY_NPM_REPO}" ]; then
     echo "ARTIFACTORY_NPM_REPO variable is not setted "
@@ -89,9 +91,7 @@ cd "$LOCAL_SOURCE_DIR"
 echo "/opt/app-root/src/.npmrc"
 cat /opt/app-root/src/.npmrc
 
-echo "_auth = amNmZXJuYW5kZXo6QVA2MnhVWkpBRWQ4VGF4NW5WdDJSOE1Ib2FH" >> /opt/app-root/src/.npmrc
-echo "always-auth = true" >> /opt/app-root/src/.npmrc
-echo "email = jcfernandez@keedio.com" >> /opt/app-root/src/.npmrc
+
 
 
 echo "---> NPM view tarball"
