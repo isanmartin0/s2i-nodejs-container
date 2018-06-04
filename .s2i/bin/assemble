@@ -65,6 +65,12 @@ node --version
 echo "---> NPM version"
 npm --version
 
+if [ -z "${ARTIFACTORY_NPM_REPO}" ]; then
+    echo "ARTIFACTORY_NPM_REPO variable is not setted "
+else
+    npm config set registry  ${ARTIFACTORY_NPM_REPO}
+fi
+
 echo "---> Registry location"
 npm config get registry
 
