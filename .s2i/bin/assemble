@@ -65,6 +65,9 @@ node --version
 echo "---> NPM version"
 npm --version
 
+echo "/opt/app-root/src/.npmrc"
+cat /opt/app-root/src/.npmrc
+
 if [ -z "${ARTIFACTORY_NPM_REPO}" ]; then
     echo "ARTIFACTORY_NPM_REPO variable is not setted "
 else
@@ -77,9 +80,6 @@ npm config get registry
 
 cd "$LOCAL_SOURCE_DIR"
 
-
-echo "/tmp/src/.npmrc"
-cat /tmp/src/.npmrc
 
 echo "/opt/app-root/src/.npmrc"
 cat /opt/app-root/src/.npmrc
