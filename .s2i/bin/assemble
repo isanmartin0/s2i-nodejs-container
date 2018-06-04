@@ -89,6 +89,10 @@ cd "$LOCAL_SOURCE_DIR"
 echo "/opt/app-root/src/.npmrc"
 cat /opt/app-root/src/.npmrc
 
+echo "_auth = amNmZXJuYW5kZXo6QVA2MnhVWkpBRWQ4VGF4NW5WdDJSOE1Ib2FH" >> /opt/app-root/src/.npmrc
+echo "always-auth = true" >> /opt/app-root/src/.npmrc
+echo "email = jcfernandez@keedio.com" >> /opt/app-root/src/.npmrc
+
 
 echo "---> NPM view tarball"
 npm view ${NODEJS_PACKAGE_TAG} dist.tarball
