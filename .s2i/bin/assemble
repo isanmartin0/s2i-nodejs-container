@@ -70,7 +70,7 @@ npm --version
 
 
 export NPM_AUTH="amNmZXJuYW5kZXo6QVA2MnhVWkpBRWQ4VGF4NW5WdDJSOE1Ib2FH"
-export NPM_AUTH_EMAIL="jcfernandez@keedio.com"
+
 
 echo "/tmp/src/.npmrc"
 cat /tmp/src/.npmrc
