@@ -43,8 +43,8 @@ echo "NODEJS_PACKAGE_TAG: ${NODEJS_PACKAGE_TAG}"
 echo "NODEJS_PACKAGE_TARBALL: ${NODEJS_PACKAGE_TARBALL}"
 echo "IS_SCOPED_PACKAGE: ${NODEJS_IS_SCOPED_PACKAGE}"
 echo "ARTIFACTORY_NPM_REPO: ${ARTIFACTORY_NPM_REPO}"
-echo "NPM_AUTH: ${NPM_AUTH}"
-echo "NPM_EMAIL_AUTH: ${NPM_EMAIL_AUTH}"
+echo "ARTIFACTORY_NPM_AUTH: ${ARTIFACTORY_NPM_AUTH}"
+echo "ARTIFACTORY_NPM_EMAIL_AUTH: ${ARTIFACTORY_NPM_EMAIL_AUTH}"
 
 if [ -z "${NODEJS_PACKAGE_TAG}" ]; then
     echo "Aborting due to NODEJS_PACKAGE_TAG environment variable is not setted"
@@ -70,8 +70,8 @@ echo "---> NPM version"
 npm --version
 
 
-export NPM_AUTH=${NPM_AUTH}
-export NPM_AUTH_EMAIL=${NPM_EMAIL_AUTH}
+export NPM_AUTH=${ARTIFACTORY_NPM_AUTH}
+export NPM_AUTH_EMAIL=${ARTIFACTORY_NPM_EMAIL_AUTH}
 
 if [ -z "${ARTIFACTORY_NPM_REPO}" ]; then
     echo "ARTIFACTORY_NPM_REPO variable is not setted "
@@ -79,13 +79,13 @@ else
     echo "---> Setting Artifactory NPM Registry location"
     npm config set registry  ${ARTIFACTORY_NPM_REPO}
 
-    if [ -z "${NPM_AUTH}" ]; then
+    if [ -z "${ARTIFACTORY_NPM_AUTH}" ]; then
         echo "Aborting due to NPM_AUTH environment variable is not setted"
         exit 1
     fi
 
-    if [ -z "${NPM_EMAIL_AUTH}" ]; then
-        echo "Aborting due to NPM_EMAIL_AUTH environment variable is not setted"
+    if [ -z "${ARTIFACTORY_NPM_EMAIL_AUTH}" ]; then
+        echo "Aborting due to ARTIFACTORY_NPM_EMAIL_AUTH environment variable is not setted"
         exit 1
     fi
 fi
